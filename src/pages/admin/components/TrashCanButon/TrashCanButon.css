@@ -1,0 +1,17 @@
+.trash-can-button {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.trash-can-button  > div {
+    width: 12px;
+    height: 12px;    
+    background-image:  url("/public/images/trashcan.png");
+    background-size: cover;
+    background-position: left;
+}

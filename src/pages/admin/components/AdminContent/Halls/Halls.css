@@ -1,0 +1,31 @@
+.admin-halls,
+.admin-halls>div,
+.admin-halls__halls-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.admin-halls>div {
+    gap: 12px;
+}
+
+.admin-halls__halls-list {
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.admin-halls__halls-list > li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.admin-halls__header {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+}

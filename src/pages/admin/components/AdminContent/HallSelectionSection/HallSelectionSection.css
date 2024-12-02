@@ -1,0 +1,20 @@
+.admin-halls-selection__halls-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.admin-halls-selection__hall .button {
+    margin: 2px 0;
+    text-transform: unset;
+    padding: 12px;
+}
+
+.admin-halls-selection__hall_active .button {
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 16px;
+    margin: 0;
+}

@@ -1,0 +1,21 @@
+.admin-section:first-child>.admin-section__header::after {
+    height: 50%;
+    top: auto;
+    bottom: 0;
+}
+
+.admin-section:last-child>.admin-section__header::after {
+    height: 50%;
+    top: 0;
+    bottom: auto;
+}
+
+.admin-section:last-child>.admin-section__body::after {
+    content: none;
+}
+
+.admin-seances .admin-section__body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

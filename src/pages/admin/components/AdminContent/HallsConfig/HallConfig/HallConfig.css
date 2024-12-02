@@ -1,0 +1,115 @@
+.admin-dialog__fields.admin-halls-config__fields {
+    flex-direction: row;
+    gap: 13px;
+    align-items: flex-end;
+}
+
+.admin-dialog__fields.admin-halls-config__fields>div {
+    width: 100px;
+}
+
+.admin-dialog__fields.admin-halls-config__fields>span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #848484;
+    transform: translateY(-10px);
+}
+
+.admin-hall-config__hall-content {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #848484;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+
+.admin-hall-config__hall-legend {
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+    row-gap: 12px;
+}
+
+.admin-hall-config__hall-legend>div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: default;
+}
+
+.admin-hall-config__place {
+    width: 26px;
+    aspect-ratio: 1;
+    border-radius: 4px;
+}
+
+.admin-hall-config__place_standart {
+    border: 1px solid #393939;
+    background: #C4C4C4;
+}
+
+.admin-hall-config__place_vip {
+    border: 1px solid #0A828A;
+    background: #B0D6D8;
+    background-image: url("/public/images/vipback.png");
+}
+
+.admin-hall-config__place_disabled {
+    border: 1px solid #C4C4C4
+}
+
+.admin-hall-config__hall-plan {
+    border: 1px solid #000000;
+    padding: 26px 20px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.admin-hall-config__hall-plan .admin-hall-config__place {
+    width: unset;
+    max-width: 26px;
+    flex: 1;    
+}
+
+.admin-hall-config__hall-plan-screen {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 19px;
+    padding-left: 19px;
+    color: #000000;
+    text-align: center;
+}
+
+.admin-hall-config__hall-plan-places,
+.admin-hall-config__hall-plan-places > div {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-hall-config__hall-plan-places {
+    width: 100%;
+}
+
+.admin-hall-config__hall-plan-places > div {
+    justify-content: center;
+}
+
+.admin-hall-config__hall-plan-places {
+    flex-direction: column;
+}
+
+.admin-hall-config__active-place-type {
+    color: black
+}
+
+.admin-hall-config__footer {
+    padding-top: 15px;
+    text-align: center;
+}

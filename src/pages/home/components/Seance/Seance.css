@@ -1,0 +1,37 @@
+.seance {
+    background: #F1EBE6F2;
+}
+
+.seance__header {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 7px;
+}
+
+.seance__film-name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.seance__film-time {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+.seance__hall-name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.seance__button-reserve {
+    margin: 30px 0;
+    padding: 12px 55px;
+}
+
+.seance__footer {
+    text-align: center;
+}

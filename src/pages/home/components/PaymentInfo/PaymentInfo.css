@@ -1,0 +1,89 @@
+.payment__header {
+    position: relative;
+    background: #F1EBE6F2;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #C76F00;
+    padding: 25px 15px;
+    text-transform: uppercase;
+}
+
+.payment__header::before,
+.payment__body::before {
+    top: -3px;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.payment__header::after,
+.payment__body::after {
+    bottom: -3px;
+}
+
+.payment__header::before,
+.payment__header::after,
+.payment__body::before,
+.payment__body::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background-image: url("/public/images/ticket-border.png");
+    background-size: contain;
+}
+
+.payment__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: #F1EBE6F2;
+    position: relative;
+    padding: 20px 15px 30px;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 3px 0;
+}
+
+.payment__session-info,
+.payment__information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment__session-info>div {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.4px;
+}
+
+.payment__session-info span {
+    font-weight: 700;
+}
+
+.payment__information {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+.payment__seats {
+    display: flex;
+    gap: 10px;
+}
+
+.payment__seats ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment__button-area {
+    text-align: center;
+}

@@ -1,0 +1,76 @@
+.hall-config__hall {
+    background: #171D24;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+}
+
+.hall-config__hall-screen>img {
+    width: 284px;
+}
+
+.hall-config__hall-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.hall-config__hall-legend {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+    column-gap: 14px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+.hall-config__seat {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+}
+
+.hall-config__hall-legend>div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.hall-config__seat_active {
+    border: 1px solid #525252;
+}
+
+.hall-config__seat_inactive {
+    border: 1px solid #171D24;
+}
+
+.hall-config__seat_free {
+    background: white;
+}
+
+.hall-config__seat_free-vip {
+    background: #F9953A;
+}
+
+.hall-config__seat_busy {}
+
+.hall-config__seat_selected {
+    background: #25C4CE;
+    box-shadow: 0px 0px 4px 0px #16A6AF;
+}
+
+.hall-config__seats_row {
+    display: flex;
+    gap: 4px;
+}
+
+.hall-config__hall-seats {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

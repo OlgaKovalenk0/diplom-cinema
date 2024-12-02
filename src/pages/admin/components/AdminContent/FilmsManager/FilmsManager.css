@@ -1,0 +1,78 @@
+.admin-films-manager {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-films-manager__films-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding-right: 32px;
+}
+
+.admin-films-manager__film {
+    display: flex;
+    background-color: #98cfec;
+    border: 1px solid #0000004D;
+    position: relative;
+    touch-action: none;
+}
+
+.admin-films-manager__film-poster {
+    width: 40px;
+    flex-shrink: 0;
+    max-height: 50px;
+}
+
+.admin-films-manager__film-poster>img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.admin-films-manager__film-name {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; 
+    overflow: hidden;
+}
+
+.admin-films-manager__film-duration {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000000B2;
+;
+}
+
+.admin-films-manager__film-info {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    padding: 0 7px;
+    justify-content: center;
+}
+
+.admin-films-manager__film .trash-can-button {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+
+@media (max-width:768px) {
+    .admin-films-manager__films-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:480px) {
+    .admin-films-manager__films-list {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}

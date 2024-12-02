@@ -1,0 +1,10 @@
+.admin-sales-opening {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.admin-sales-opening__footer,
+.admin-sales-opening__hall-status {
+    text-align: center;
+}

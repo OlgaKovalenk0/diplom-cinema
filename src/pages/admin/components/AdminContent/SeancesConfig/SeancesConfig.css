@@ -1,0 +1,79 @@
+.admin-seances-config {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 0 61px 0 35px;
+}
+
+.admin-seances-config__hall-name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.admin-seances-config__hall-plan {
+    border: 1px solid #848484;
+    height: 60px;
+    display: flex;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.admin-seances-config__hall-plan > li {
+    position: relative;
+}
+
+.admin-seances-config__hall-plan-film {
+    background-color: #98cfec;
+    outline: 1px solid #0000004D;
+    position: relative;
+    height: 100%;
+}
+
+.admin-seances-config__hall-plan-film>div {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    position: absolute;
+    inset: 10px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.admin-seances-config__hall-plan-film>div>div {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.admin-seances-config__hall-plan-seance-time {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    transform: translateX(-50%);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #848484;
+}
+
+.admin-seances-config__hall-plan-seance-time:before {
+    position: absolute;
+    content: '';
+    width:1px;
+    height: 5px;
+    left:50%;
+    background-color: #848484;
+    top: -5px;
+}
+
+@media (max-width:480px) {
+    .admin-seances-config {
+        padding: 0;
+    }
+}

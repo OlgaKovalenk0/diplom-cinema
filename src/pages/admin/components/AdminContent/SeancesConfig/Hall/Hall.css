@@ -1,0 +1,11 @@
+.admin-seances-config__hall-plan-trashcan {
+    height: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    top:0;
+    transform: translateX(-100%);
+    background-image: url("/public/images/trash1.svg");
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

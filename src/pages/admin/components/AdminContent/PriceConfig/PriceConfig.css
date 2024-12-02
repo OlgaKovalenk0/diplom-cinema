@@ -1,0 +1,39 @@
+.admin-price-config,
+.admin-price-config__section {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.admin-price-config__section {
+    gap: 10px;
+}
+
+.admin-price-config__section-header {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+
+.admin-price-config__footer {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.admin-price-config__fields.admin-dialog__fields>div>div {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.admin-price-config__fields.admin-dialog__fields>div>div>span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #848484;
+}
+
+.admin-price-config__fields.admin-dialog__fields>div>div>input {
+    width: 100px;
+}

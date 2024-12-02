@@ -1,0 +1,7 @@
+.auth-dialog {
+    max-width: 480px;
+}
+
+.auth-dialog .admin-dialog__header {
+    justify-content: center;
+}
