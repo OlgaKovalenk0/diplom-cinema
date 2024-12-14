@@ -17,9 +17,17 @@ const placesLegendMap: [TSeatStatus, string][] = [
     ['disabled', '— заблокированные (нет кресла)']
 ]
 
-export function HallConfig({ hall, onHallSave }: THallConfigProps) {
+const getNextSeatStatus = (seatStatus: TSeatStatus): TSeatStatus => {
+    const statuses = placesLegendMap.map(([status, title]) => status);
+    const index = statuses.findIndex(f => f == seatStatus);
+    if (index == -1) {
+        return seatStatus;
+    }
+    const nextIndex = index == 2 ? 0 : index + 1;
+    return statuses[nextIndex];
+}
 
-    const [activSeatType, setActiveSeatType] = useState<TSeatStatus>('standart');
+export function HallConfig({ hall, onHallSave }: THallConfigProps) {
 
     const [hallState, setHallState] = useState(hall);
 
@@ -71,39 +79,34 @@ export function HallConfig({ hall, onHallSave }: THallConfigProps) {
                 <div className='admin-hall-config__hall-legend'>
                     {placesLegendMap.map(([status, name]) => <div
                         key={status}
-                        onClick={() => {
-                            setActiveSeatType(status);
-                        }}
-                        className={classNames({
-                            'admin-hall-config__active-place-type': activSeatType == status
-                        })}>
+                    >
                         <div className={`admin-hall-config__place admin-hall-config__place_${status}`}></div>
                         <div>{name}</div>
                     </div>)}
                 </div>
                 <div>Чтобы изменить вид кресла, нажмите по нему левой кнопкой мыши</div>
                 <div>
-                <div className='admin-hall-config__hall-plan'>
-                    <div className='admin-hall-config__hall-plan-screen'>ЭКРАН</div>
-                    <div className='admin-hall-config__hall-plan-places'>
-                        {hallState.hall_config.map((row, rowIndex) => <div key={rowIndex}>
-                            {row.map((place, placeIndex) => <div
-                                className={classNames('admin-hall-config__place', {
-                                    'admin-hall-config__place_standart': place == 'standart',
-                                    'admin-hall-config__place_vip': place == 'vip',
-                                    'admin-hall-config__place_disabled': place == 'disabled'
-                                })}
-                                key={`${rowIndex}${placeIndex}`}
-                                onClick={() => {
-                                    const hallStr = JSON.stringify(hallState);
-                                    const hallCopy: IHall = JSON.parse(hallStr);
-                                    hallCopy.hall_config[rowIndex][placeIndex] = activSeatType;
-                                    setHallState(hallCopy);
-                                }}
-                            ></div>)}
-                        </div>)}
+                    <div className='admin-hall-config__hall-plan'>
+                        <div className='admin-hall-config__hall-plan-screen'>ЭКРАН</div>
+                        <div className='admin-hall-config__hall-plan-places'>
+                            {hallState.hall_config.map((row, rowIndex) => <div key={rowIndex}>
+                                {row.map((place, placeIndex) => <div
+                                    className={classNames('admin-hall-config__place', {
+                                        'admin-hall-config__place_standart': place == 'standart',
+                                        'admin-hall-config__place_vip': place == 'vip',
+                                        'admin-hall-config__place_disabled': place == 'disabled'
+                                    })}
+                                    key={`${rowIndex}${placeIndex}`}
+                                    onClick={() => {
+                                        const hallStr = JSON.stringify(hallState);
+                                        const hallCopy: IHall = JSON.parse(hallStr);
+                                        hallCopy.hall_config[rowIndex][placeIndex] = getNextSeatStatus(place);
+                                        setHallState(hallCopy);
+                                    }}
+                                ></div>)}
+                            </div>)}
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div className='admin-hall-config__footer'>
                     <button className='button' onClick={() => {
